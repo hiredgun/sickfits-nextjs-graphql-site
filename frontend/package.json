@@ -21,6 +21,7 @@
         "react": "^16.7.0-alpha.0",
         "react-dom": "^16.7.0-alpha.0",
         "styled-components": "^4.0.3",
+        "styled-media-query": "^2.0.2",
         "styled-theming": "^2.2.0",
         "styled-tools": "^1.5.2"
     },
