@@ -7,21 +7,19 @@ import Header from './Header';
 import Footer from './Footer';
 
 const StyledPage = styled.div`
-  border: 1px solid red;
+    border: 1px solid red;
 `;
 
-const Page = ({ children }) => {
-  return (
+const Page = ({ children }) => (
     <ThemeProvider theme={theme}>
-      <StyledPage>
-        <GlobalStyles theme={theme} />
-        <Meta />
-        <Header />
-        {children}
-        <Footer />
-      </StyledPage>
+        <StyledPage>
+            <GlobalStyles theme={theme} />
+            <Meta />
+            <Header />
+            {children}
+            <Footer />
+        </StyledPage>
     </ThemeProvider>
-  );
-};
+);
 
 export default Page;

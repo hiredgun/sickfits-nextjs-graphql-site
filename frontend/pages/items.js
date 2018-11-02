@@ -1,11 +1,5 @@
-import React from 'react'
+import React from 'react';
 
-const items = () => {
-  return (
-    <div>
-      blach
-    </div>
-  )
-}
+const items = () => <div>blach</div>;
 
-export default items
+export default items;

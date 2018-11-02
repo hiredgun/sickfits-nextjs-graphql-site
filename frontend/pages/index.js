@@ -1,3 +1,3 @@
-import Link from 'next/link';
+import React from 'react';
 
 export default () => <main>Welcome to next.js!</main>;
