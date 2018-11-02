@@ -1,14 +1,27 @@
 import React from 'react';
 import Head from 'next/head';
+import styled, { ThemeProvider } from 'styled-components';
+import GlobalStyles from '../styles/global';
+import theme from '../styles/theme';
+import Meta from './Meta';
+import Header from './Header';
+import Footer from './Footer';
+
+const StyledPage = styled.div`
+  border: 1px solid red;
+`;
 
 const Page = ({ children }) => {
   return (
-    <>
-      <Head>
-        <title>Sickfits</title>
-      </Head>
-      {children}
-    </>
+    <ThemeProvider theme={theme}>
+      <StyledPage>
+        <GlobalStyles />
+        <Meta />
+        <Header />
+        {children}
+        <Footer />
+      </StyledPage>
+    </ThemeProvider>
   );
 };
 
