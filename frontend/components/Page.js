@@ -1,6 +1,5 @@
 import React from 'react';
-import Head from 'next/head';
-import styled, { ThemeProvider } from 'styled-components';
+import styled, { ThemeProvider } from 'lib/css-in-js';
 import GlobalStyles from '../styles/global';
 import theme from '../styles/theme';
 import Meta from './Meta';
@@ -15,7 +14,7 @@ const Page = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <StyledPage>
-        <GlobalStyles />
+        <GlobalStyles theme={theme} />
         <Meta />
         <Header />
         {children}
