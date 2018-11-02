@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { ThemeProvider } from 'lib/css-in-js';
+import styled, { ThemeProvider, prop } from 'lib/css-in-js';
 import GlobalStyles from '../styles/global';
 import theme from '../styles/theme';
 import Meta from './Meta';
@@ -7,7 +7,8 @@ import Header from './Header';
 import Footer from './Footer';
 
 const StyledPage = styled.div`
-    border: 1px solid red;
+    background: white;
+    color: ${prop('theme.black')};
 `;
 
 const Page = ({ children }) => (

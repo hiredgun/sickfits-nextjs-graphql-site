@@ -7,7 +7,7 @@ module.exports = {
         // Important: return the modified config
         config.resolve.alias.lib = path.resolve(__dirname, 'lib/');
         config.resolve.alias.components = path.resolve(__dirname, 'components/');
-        console.log(config);
+
         return config;
     },
     webpackDevMiddleware: config =>

@@ -13,6 +13,7 @@ module.exports = {
         'react/destructuring-assignment': ['warn'],
         'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
         'react/prop-types': ['warn'],
+        'jsx-a11y/anchor-is-valid': ['warn'],
     },
     settings: {
         'import/resolver': {

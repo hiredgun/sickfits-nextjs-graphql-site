@@ -1,5 +1,5 @@
 import React from 'react';
 
-const items = () => <div>blach</div>;
+const items = () => <div />;
 
 export default items;

@@ -1,19 +1,25 @@
 import React from 'react';
-import styled, { css, switchProp } from 'lib/css-in-js';
+import Link from 'next/link';
+import NavStyles from './styles/NavStyles';
 
-const StyledNav = styled.nav`
-    ${switchProp('variant', {
-        standard: css`
-            border: 10px solid red;
-            background: purple;
-        `,
-        primary: css`
-            border: 1px solid red;
-            background: purple;
-        `,
-    })};
-`;
-
-const Nav = () => <StyledNav variant="primary">Navigation</StyledNav>;
+const Nav = () => (
+    <NavStyles data-test="nav">
+        <Link href="/items">
+            <a>Shop</a>
+        </Link>
+        <Link href="/sell">
+            <a>Sell</a>
+        </Link>
+        <Link href="/orders">
+            <a>Orders</a>
+        </Link>
+        <Link href="/me">
+            <a>Account</a>
+        </Link>
+        <Link href="/signup">
+            <a>Sign In</a>
+        </Link>
+    </NavStyles>
+);
 
 export default Nav;
