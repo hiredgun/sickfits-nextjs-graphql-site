@@ -3,6 +3,7 @@ import App, { Container } from 'next/app';
 import Page from 'components/Page';
 
 export default class MyApp extends App {
+    // eslint-disable-next-line
     static async getInitialProps({ Component, router, ctx }) {
         let pageProps = {};
 

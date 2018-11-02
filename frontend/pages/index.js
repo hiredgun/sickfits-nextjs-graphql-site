@@ -1,3 +1,5 @@
 import React from 'react';
 
-export default () => <main>Welcome to next.js!</main>;
+const Home = () => <main>Welcome to next.js!</main>;
+
+export default Home;
