@@ -1,8 +1,10 @@
 import React from 'react';
 import App, { Container } from 'next/app';
 import Page from 'components/Page';
+import { ApolloProvider } from 'react-apollo';
+import withData from '../lib/withApollo';
 
-export default class MyApp extends App {
+class MyApp extends App {
     // eslint-disable-next-line
     static async getInitialProps({ Component, router, ctx }) {
         let pageProps = {};
@@ -19,10 +21,14 @@ export default class MyApp extends App {
 
         return (
             <Container>
-                <Page>
-                    <Component {...pageProps} />
-                </Page>
+                <ApolloProvider client={this.props.apollo}>
+                    <Page>
+                        <Component {...pageProps} />
+                    </Page>
+                </ApolloProvider>
             </Container>
         );
     }
 }
+
+export default withData(MyApp);
